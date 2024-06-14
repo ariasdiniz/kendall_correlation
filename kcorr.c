@@ -24,8 +24,8 @@ static void fill_data(char *csv_file_path, Data *data, char *line, char **buffer
 
   while ((line = readline(f, line)) != NULL) {
     buffer = parseline(line, ",", buffer);
-    data->x[i] = atof(buffer[2]);
-    data->y[i] = atof(buffer[3]);
+    data->x[i] = atof(buffer[0]);
+    data->y[i] = atof(buffer[1]);
     i++;
   }
   fclose(f);
